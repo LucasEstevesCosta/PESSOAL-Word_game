@@ -1,7 +1,7 @@
 :root {
     --correct-color: #4CAF50;
     --misplaced-color: #FFC107;
-    --wrong-color: #9E9E9E;
+    --wrong-color: #dd4c4c;
 }
 
 .container {
@@ -46,6 +46,20 @@
 }
 
 .letter-wrong {
+    background-color: var(--wrong-color);
+    color: white;
+}
+.results__text-correct {
+    background-color: var(--correct-color);
+    color: white;
+}
+
+.results__text-misplaced {
+    background-color: var(--misplaced-color);
+    color: white;
+}
+
+.results__text-wrong {
     background-color: var(--wrong-color);
     color: white;
 }

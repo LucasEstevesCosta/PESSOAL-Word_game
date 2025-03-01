@@ -24,7 +24,6 @@ class GameState {
 
         // Store the guess with its validation
         this.guesses.push({ word: guess, validation });
-        this.notifyObservers();
 
         return {
             success: true,
@@ -40,13 +39,5 @@ class GameState {
                 wrong: Array.from(this.allWrong)
             }
         };
-    }
-
-    addObserver(observer) {
-        this.observers.push(observer);
-    }
-
-    notifyObservers() {
-        this.observers.forEach(observer => observer.update(this));
     }
 }

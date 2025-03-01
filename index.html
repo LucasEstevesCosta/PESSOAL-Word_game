@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Game</title>
+    <title>Jogo de palavras</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Word Game</h1>
+        <h1>JOGO DE PALAVRAS</h1>
         <div class="game-options">
             <select id="wordLength">
-                <option value="5">5 Letters</option>
-                <option value="6">6 Letters</option>
+                <option value="5">5 Letras</option>
+                <option value="6">6 Letras</option>
             </select>
-            <button id="newGame">New Game</button>
+            <button id="newGame">Novo Jogo</button>
         </div>
         
         <div id="gameBoard"></div>
         
         <div class="input-area">
             <input type="text" id="guessInput" maxlength="5">
-            <button id="submitGuess">Guess</button>
+            <button id="submitGuess">Tentativa</button>
         </div>
         
         <div class="game-info">
-            <div id="attempts">Attempts: 0/6</div>
+            <div id="attempts">TENTATIVAS: 0/6</div>
             <div id="usedLetters">
-                <div id="correctLetters">Correct: </div>
-                <div id="misplacedLetters">Misplaced: </div>
-                <div id="wrongLetters">Wrong: </div>
+                <div class="results__text-correct" id="correctLetters">LETRAS CORRETAS: </div>
+                <div class="results__text-misplaced" id="misplacedLetters">POSIÇÃO ERRADA: </div>
+                <div class="results__text-wrong" id="wrongLetters">LETRAS ERRADAS: </div>
             </div>
         </div>
     </div>

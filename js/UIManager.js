@@ -49,19 +49,9 @@ class UIManager {
     }
 
     updateLetterStats(result) {
-        const letters = this.collectUniqueLetters(result);
-        
-        this.correctLetters.textContent = 'Correct: ' + Array.from(letters.correct).join(', ');
-        this.misplacedLetters.textContent = 'Misplaced: ' + Array.from(letters.misplaced).join(', ');
-        this.wrongLetters.textContent = 'Wrong: ' + Array.from(letters.wrong).join(', ');
-    }
-
-    collectUniqueLetters(result) {
-        return {
-            correct: new Set(result.validation.correct.map(i => result.word[i])),
-            misplaced: new Set(result.validation.misplaced.map(i => result.word[i])),
-            wrong: new Set(result.validation.wrong.map(i => result.word[i]))
-        };
+        this.correctLetters.textContent = 'Correct: ' + result.allLetters.correct.join(', ');
+        this.misplacedLetters.textContent = 'Misplaced: ' + result.allLetters.misplaced.join(', ');
+        this.wrongLetters.textContent = 'Wrong: ' + result.allLetters.wrong.join(', ');
     }
 
     checkGameEnd(result) {

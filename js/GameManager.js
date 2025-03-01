@@ -9,8 +9,9 @@ class GameManager {
 
     initializeGame(wordLength) {
         const wordBank = new WordBank(wordLength);
-        const validator = new StandardValidation();
+        const validator = new ValidationStrategy();
         this.gameState = new GameState(wordBank, validator);
         return this.gameState;
+        console.log('Game initialized!');
     }
 }

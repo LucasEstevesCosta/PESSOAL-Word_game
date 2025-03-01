@@ -18,8 +18,11 @@ class GameState {
 
         return {
             success: true,
-            validation,
-            isComplete: validation.correct.length === this.wordBank.currentWord.length
+            word: guess,
+            validation: validation,
+            attempts: this.guesses.length,
+            targetWord: this.wordBank.currentWord,
+            isComplete: validation.correct.length === guess.length
         };
     }
 

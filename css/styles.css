@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 5px;
+    margin-bottom: 5px;
 }
 
 .letter-box {
@@ -34,6 +35,17 @@
     text-transform: uppercase;
 }
 
-.letter-correct { background-color: var(--correct-color); }
-.letter-misplaced { background-color: var(--misplaced-color); }
-.letter-wrong { background-color: var(--wrong-color); }
+.letter-correct {
+    background-color: var(--correct-color);
+    color: white;
+}
+
+.letter-misplaced {
+    background-color: var(--misplaced-color);
+    color: white;
+}
+
+.letter-wrong {
+    background-color: var(--wrong-color);
+    color: white;
+}

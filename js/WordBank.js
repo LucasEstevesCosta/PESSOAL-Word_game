@@ -37,3 +37,5 @@ class WordBank {
         this.currentWord = this.words[randomIndex];
     }
 }
+
+module.exports = WordBank;

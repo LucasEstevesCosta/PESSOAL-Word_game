@@ -1,4 +1,14 @@
+/**
+ * Represents the state of the game.
+ * Manages the word bank, validator, guesses, and tracking of correct, misplaced, and wrong letters.
+ * Provides methods to make guesses and retrieve game state information.
+ */
 class GameState {
+    /**
+     * Creates a new instance of the GameState class.
+     * @param {WordBank} wordBank - The word bank to use for the game.
+     * @param {Validator} validator - The validator to use for validating guesses.
+     */
     constructor(wordBank, validator) {
         this.wordBank = wordBank;
         this.validator = validator;
@@ -10,6 +20,11 @@ class GameState {
         this.observers = [];
     }
 
+    /**
+     * Makes a guess in the game and updates the game state accordingly.
+     * @param {string} guess - The word to guess.
+     * @returns {object} An object containing information about the guess, including success, word, validation, attempts, target word, completion status, all guesses, and all letters.
+     */
     makeGuess(guess) {
         if (this.guesses.length >= this.maxAttempts) {
             return { success: false, message: 'Game over!' };

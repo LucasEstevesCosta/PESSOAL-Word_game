@@ -1,22 +1,15 @@
 /**
- * @typedef {Object} GuessResult
- * @property {boolean} success - Whether the guess was valid
- * @property {string} word - The guessed word
- * @property {Object} validation - Validation results
- * @property {number[]} validation.correct - Indices of correct letters
- * @property {number[]} validation.misplaced - Indices of misplaced letters
- * @property {number[]} validation.wrong - Indices of wrong letters
- * @property {number} attempts - Number of attempts made
- * @property {string} targetWord - The word to guess
- * @property {boolean} isComplete - Whether the word was guessed correctly
+ * Class responsible for validating word guesses against a target word
  */
-
 class ValidationStrategy {
     /**
-     * Validates a guess against a target word
-     * @param {string} guess - The player's guess
-     * @param {string} target - The target word
-     * @returns {Object} validation result
+     * Validates a guess word against a target word and returns the validation result
+     * @param {string} guess - The word guessed by the player
+     * @param {string} target - The target word to compare against
+     * @returns {Object} result - Object containing arrays of letter positions
+     * @returns {number[]} result.correct - Indexes of correctly placed letters
+     * @returns {number[]} result.misplaced - Indexes of letters that exist in target but in wrong position
+     * @returns {number[]} result.wrong - Indexes of letters that don't exist in target word
      */
     validate(guess, target) {
         const result = {

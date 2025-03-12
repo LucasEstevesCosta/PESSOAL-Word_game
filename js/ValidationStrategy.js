@@ -34,3 +34,5 @@ class ValidationStrategy {
         return result;
     }
 }
+
+module.exports = ValidationStrategy;
